@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Tugas1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        char[] kode = new char[10];
+        char[] kode =  {'A','B','D','E','F','H','L','N','T'};
         char[][] kota = {
             {'B','A','N','T','E','N'},
             {'J','A','K','A','R','T','A'},
