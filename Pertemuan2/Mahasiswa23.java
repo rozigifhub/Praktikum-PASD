@@ -33,6 +33,17 @@ public class Mahasiswa23 {
             return "Kinerja buruk";
         }
     }
+
+    public Mahasiswa23(){
+
+    }
+
+    public Mahasiswa23(String nm, String nim, double ipk, String kls){
+        nama = nm;
+        this.nim = nim;
+        this.ipk = ipk;
+        kelas = kls;
+    }
     public static void main(String[] args) {
 
         

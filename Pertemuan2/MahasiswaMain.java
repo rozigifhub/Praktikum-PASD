@@ -10,5 +10,12 @@ public class MahasiswaMain<NoAbsen> {
         mhs1.ubahKelas("S1 2K");
         mhs1.updateIPK(3.60);
         mhs1.tampilkanInformasi();
+
+        Mahasiswa23 mhs2 = new Mahasiswa23("Annisa Nabila", "269272378", 3.25, "TI 2L");
+        mhs2.updateIPK(3.30);
+        mhs2.tampilkanInformasi();
+
+        Mahasiswa23 mhsRozi = new Mahasiswa23("Muhammad Zainur Roziqin", "254107020081", 4.0, "TI 1G");
+        mhsRozi.tampilkanInformasi();
     }
 }
