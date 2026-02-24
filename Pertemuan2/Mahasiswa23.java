@@ -2,7 +2,6 @@ public class Mahasiswa23 {
     String nama;
     String nim;
     String kelas;
-    String kelasBaru;
     double ipk;
 
     void tampilkanInformasi(){
@@ -11,12 +10,12 @@ public class Mahasiswa23 {
         System.out.println("Kelas: " + kelas);
         System.out.println("IPK: " + ipk);
     }
-    void ubahKelas(){
+    void ubahKelas(String kelasBaru){
         kelas = kelasBaru;
     }
     void updateIPK(double ipkBaru){
         if ( ipk < 0.0 || ipk > 4.0){
-            System.out.println();
+            System.out.println("Nilai tidak valid");
             return;
         } else{
             ipk = ipkBaru;
