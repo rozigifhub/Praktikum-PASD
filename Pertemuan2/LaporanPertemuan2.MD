@@ -12,11 +12,11 @@
 4.  Done
 5.  Method `nilaiKinerja()` bekerja dengan **membaca nilai `ipk`** mahasiswa, lalu mengecek **rentang IPK** memakai rangkaian `if - else if - else`. Begitu ada kondisi yang cocok, method langsung **mengembalikan (return) String** kategori kinerjanya.
 
-**Kriteria yang digunakan (berdasarkan IPK):**
-- Jika `ipk >= 3.5` → `"Kinerja sangat baik"`
-- Else jika `ipk >= 3.0` → `"Kinerja baik"`
-- Else jika `ipk >= 2.0` → `"Kinerja cukup"`
-- Selain itu (`ipk < 2.0`) → `"Kinerja buruk"`
+    **Kriteria yang digunakan (berdasarkan IPK):**
+    - Jika `ipk >= 3.5` → `"Kinerja sangat baik"`
+    - Else jika `ipk >= 3.0` → `"Kinerja baik"`
+    - Else jika `ipk >= 2.0` → `"Kinerja cukup"`
+    - Selain itu (`ipk < 2.0`) → `"Kinerja buruk"`
 
-**Yang di-return:**
-- Sebuah **String** berisi **kategori kinerja** sesuai nilai `ipk` (salah satu dari 4 teks di atas).
+    **Yang di-return:**
+    - Sebuah **String** berisi **kategori kinerja** sesuai nilai `ipk` (salah satu dari 4 teks di atas).
