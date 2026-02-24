@@ -15,7 +15,13 @@ public class Mahasiswa23 {
         kelas = kelasBaru;
     }
     void updateIPK(double ipkBaru){
-        ipk = ipkBaru;
+        if ( ipk < 0.0 || ipk > 4.0){
+            System.out.println();
+            return;
+        } else{
+            ipk = ipkBaru;
+        }
+        
     }
     String nilaiKinerja(){
         if (ipk >= 3.5){
