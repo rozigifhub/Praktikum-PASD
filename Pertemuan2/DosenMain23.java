@@ -1,3 +1,4 @@
+@SuppressWarnings("all")
 public class DosenMain23 {
     public static void main(String[] args) {
         Dosen23 dsn1 = new Dosen23();
