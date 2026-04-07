@@ -1,0 +1,262 @@
+Algoritma dan Struktur Data 2025-2026 
+
+JOBSHEET VI 
+SEARCHING 
+
+6.1. 
+
+Tujuan Praktikum 
+
+Setelah melakukan materi praktikum ini, mahasiswa mampu: 
+
+1.  Menjelaskan mengenai algoritma Searching. 
+
+2.  Membuat dan mendeklarasikan struktur algoritma Searching. 
+
+3.  Menerapkan dan mengimplementasikan algoritma Searching.  
+
+6.2. 
+
+Searching/ Pencarian Menggunakan Algoritma Sequential Search 
+
+Perhatikan  diagram  class Mahasiswa  di  bawah  ini.  Diagram  class  ini yang  selanjutnya  akan 
+
+dibuat sebagai acuan dalam membuat kode program class Mahasiswa. 
+
+Mahasiswa 
+
+nim: String 
+nama: String 
+kelas: String 
+ipk: double 
+Mahasiswa() 
+Mahasiswa(nm: String, name: String, kls: String, ip: 
+double) 
+tampilInformasi(): void 
+
+Berdasarkan class diagram di atas, akan dibuat class Mahasiswa yang berfunsi untuk membuat 
+
+objek  mahasiswa  yang  akan  dimasukan  ke  dalam  sebuah  array.  Terdapat  sebuah  konstruktor 
+
+berparameter dan juga fungsi tampilInformasi() untuk menampilkan semua atribut yang ada. 
+
+MahasiswaBerprestasi 
+
+listMhs: Mahasiswa[5] 
+idx: int 
+tambah(mhs: Mahasiswa): void 
+tampil(): void 
+sequentialSearch(double cari): int 
+tampilPoisisi(double x,int pos): void 
+tampilDataSearch(double x,int pos) :void 
+
+Selanjutnya class diagram di atas merupakan representasi dari sebuah class yang berfungsi 
+
+untuk melakukan operasi-operasi dari objek array Mahasiswa, misalkan untuk menambahkan objek 
+
+mahasiswa,  menampilkan  semua  data  mahasiswa,  untuk  melakukan  pencarian  berdasarkan  IPK 
+
+menggunakan  algoritma  Sequential  Search,  menampilkan  posisi  dari  data  yang  dicari,  serta 
+
+menampilkan data mahasiswa yang dicari. 
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025-2026 
+
+6.2.1.  Langkah-langkah Percobaan Sequential Search 
+
+1.  Pada  pertemuan 
+
+jobsheet  6 
+
+ini  akan  menggunakan  class  Mahasiswa<no  Presensi>, 
+
+MahasiswaBerprestasi<no  Presensi>,  dan  MahasiswaDemo<no  presensi>  pada  pertemuan 
+
+jobsheet 5 sebelumnya, kemudian buka ke tiga class tersebut di text editor.  
+
+2.  Tambahkan method sequentialSearching bertipe integer dengan parameter cari bertipe 
+
+double  pada  class  MahasiswaBerprestasi<no  presensi>.  Kemudian  Deklarasikan  isi  method 
+
+sequentialSearching  dengan  algoritma  pencarian  data  menggunakan  teknik  sequential 
+
+searching. 
+
+3.  Buatlah method tampilPoisisi bertipe void dan Deklarasikan isi dari method tampilPoisisi 
+
+pada class MahasiswaBerprestasi<no presensi>. 
+
+4.  Pada  class  MahasiswaBerprestasi<no  presensi>,  buatlah  method  tampilDataSearch  bertipe 
+
+void dan deklarasikan isi dari method tampilDataSearch. 
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025-2026 
+
+5.  Pada class MahasiswaDemo<noPresensi>, tambahkan kode program berikut ini untuk melakukan 
+
+pencarian data dengan algoritma sequential searching. 
+
+6.  Jalankan dan amati hasilnya.  
+
+6.2.2.  Verifikasi Hasil Percobaan 
+
+Cocokkan hasil kode program anda dengan gambar berikut ini. 
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025-2026 
+
+6.2.3.  Pertanyaan 
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025-2026 
+
+1.  Jelaskan  perbedaan  metod  tampilDataSearch  dan  tampilPosisi  pada  class 
+
+MahasiswaBerprestasi! 
+
+2.  Jelaskan fungsi break pada kode program di bawah ini!  
+
+3.  Apa fungsi variabel pos atau indeks hasil pencarian dalam program sequential search? 
+
+4.  Jika terdapat lebih dari satu data dengan nilai yang sama, hasil pencarian sequential search yang 
+
+dibuat di atas akan menampilkan data ke berapa? Jelaskan. 
+
+5.  Berkaitan dengan pertanyaan nomor 2 di atas, apa yang terjadi jika perintah break dihapus dari 
+
+kode di atas? 
+
+6.3. 
+
+Searching/ Pencarian Menggunakan Algoritma Binary Search 
+
+6.3.1.  Langkah-langkah Percobaan Binary Search 
+
+1.  Pada  percobaan  6.2.1  (sequential  search)  tambahkan  method  findBinarySearch  bertipe 
+
+integer  pada  class  MahasiswaBerprestasi.  Kemudian  Deklarasikan 
+
+isi  method 
+
+findBinarySearch dengan algoritma pencarian data menggunakan teknik binary searching. 
+
+2.  Panggil method findBinarySearch terdapat pada class MahasiswaBerprestasi di kelas 
+
+MahasiswaDemo. Kemudia panggil method tampilPosisi dan tampilDataSearch 
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025-2026 
+
+3.  Jalankan  dan  amati  hasilnya  (inputkan  data  IPK  secara  terurut  -ASC  seperti  verifikasi  hasil 
+
+percobaan di bawah ini).  
+
+6.3.2.  Verifikasi Hasil Percobaan 
+
+Cocokkan hasil kode program anda dengan gambar berikut ini. 
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025-2026 
+
+6.3.3.  Pertanyaan 
+
+1.  Tunjukkan pada kode program yang mana proses divide dijalankan! 
+
+2.  Tunjukkan pada kode program yang mana proses conquer dijalankan! 
+
+3.  Apa fungsi left, right, dan mid? 
+
+4.  Jika  data  IPK  yang  dimasukkan  tidak  urut.  Apakah  program  masih  dapat  berjalan?  Mengapa 
+
+demikian? 
+
+5.  Jika IPK yang dimasukkan dari IPK terbesar ke terkecil (misal: 3.8, 3.7, 3.5, 3.4, 3.2) dan elemen 
+
+yang dicari adalah 3.2. Bagaimana hasil dari binary search? Apakah sesuai? Jika tidak sesuai maka 
+
+ubahlah kode program binary seach agar hasilnya sesuai 
+
+6.  Jelaskan bagaimana binary search menentukan bahwa data yang dicari tidak ditemukan di dalam 
+
+array. 
+
+7.  Modifikasi program di atas yang mana jumlah mahasiswa yang diinputkan sesuai dengan masukan 
+
+dari keyboard. 
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
