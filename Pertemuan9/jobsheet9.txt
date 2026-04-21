@@ -1,0 +1,428 @@
+Algoritma dan Struktur Data 2024-2025 
+
+JOBSHEET IX 
+STACK 
+
+1.  Tujuan Praktikum 
+
+Setelah melakukan materi praktikum ini, mahasiswa mampu: 
+
+1.  Membuat struktur data Stack 
+
+2.  Menerapkan algoritma Stack ke dalam program Java 
+
+2.  Praktikum 
+
+2.1  Percobaan 1: Mahasiswa Mengumpulkan Tugas 
+
+Waktu Percobaan : 90 Menit 
+
+Sejumlah  mahasiswa  mengumpulkan  berkas  tugas  di  meja  dosen  secara  ditumpuk  dengan 
+
+menerapkan prinsip stack. Dosen melakukan penilaian secara terurut mulai dari berkas tugas teratas. 
+
+Perhatikan Class Diagram Mahasiswa berikut. 
+
+Mahasiswa<NoAbsen> 
+
+nim: String 
+nama: String 
+kelas: String 
+nilai: int 
+Mahasiswa<NoAbsen>() 
+Mahasiswa<NoAbsen>(nim: String, nama: String, kelas: String) 
+tugasDinilai(nilai: int) 
+
+Selanjutnya,  untuk  mengumpulkan  berkas  tugas,  diperlukan  class  StackTugasMahasiswa  yang 
+
+berperan sebagai Stack tempat menyimpan data tugas mahasiswa. Atribut dan method yang terdapat 
+
+di  dalam  class  StackTugasMahasiswa  merepresentasikan  pengolahan  data  menggunakan  struktur 
+
+Stack. Perhatikan Class Diagram StackTugasMahasiswa berikut. 
+
+StackTugasMahasiswa<NoAbsen> 
+
+stack: Mahasiswa[] 
+size: int 
+top: int 
+StackTugasMahasiswa<NoAbsen>(size: int) 
+isFull(): boolean 
+isEmpty(): boolean 
+push(mhs): void 
+pop(): Mahasiswa 
+peek(): Mahasiswa 
+print(): void 
+
+Tim Ajar Algoritma dan Struktur Data 2024-2025 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+1 
+
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2024-2025 
+
+Catatan: Tipe data pada variabel stack menyesuaikan dengan data yang akan disimpan di dalam 
+
+Stack.  Pada  percobaan  ini,  data  yang  akan  disimpan  merupakan  array  of  object  dari  Mahasiswa, 
+
+sehingga tipe data yang digunakan adalah Mahasiswa. 
+
+Berdasarkan dua class diagram tersebut, program menggunakan bahasa Java. 
+
+2.1.1  Langkah-langkah Percobaan 
+
+A.  Class Mahasiswa 
+
+1.  Buat  folder  baru  bernama  Jobsheet9  di  dalam  repository  Praktikum  ASD.  Buat  file  baru,  beri 
+
+nama Mahasiswa<NoAbsen>.java 
+
+2.  Lengkapi  class  Mahasiswa  dengan  atribut  yang  telah  digambarkan  di  dalam  class  diagram 
+
+Mahasiswa, yang terdiri dari atribut nama, nim, kelas, dan nilai 
+
+3.  Tambahkan  konstruktor  berparameter  pada  class  Mahasiswa  sesuai  dengan  class  diagram 
+
+Mahasiswa. Berikan nilai default nilai = -1 sebagai nilai awal ketika tugas belum dinilai 
+
+4.  Tambahkan  method  tugasDinilai()  yang  digunakan  untuk  mengeset  nilai  ketika  dilakukan 
+
+penilaian tugas mahasiswa 
+
+B.  Class StackTugasMahasiswa 
+
+5.  Setelah 
+
+membuat 
+
+class 
+
+Mahasiswa, 
+
+selanjutnya 
+
+perlu 
+
+dibuat 
+
+class 
+
+StackTugasMahasiswa<NoAbsen>.java sebagai tempat untuk mengelola tumpukan tugas. Class 
+
+StackTugasMahasiswa merupakan penerapan dari struktur data Stack 
+
+6.  Lengkapi  class  StackTugasMahasiswa  dengan  atribut  yang  telah  digambarkan  di  dalam  class 
+
+diagram StackTugasMahasiswa, yang terdiri dari atribut stack, size, dan top 
+
+7.  Tambahkan  konstruktor  berparameter  pada  class  StackTugasMahasiswa  untuk  melakukan 
+
+inisialisasi kapasitas maksimum data tugas mahasiswa yang dapat disimpan di dalam Stack, serta 
+
+mengeset indeks awal dari pointer top 
+
+Tim Ajar Algoritma dan Struktur Data 2024-2025 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+2 
+
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2024-2025 
+
+8.  Selanjutnya,  buat  method  isFull  bertipe  boolean  untuk  mengecek  apakah  tumpukan  tugas 
+
+mahasiswa sudah terisi penuh sesuai kapasitas 
+
+9.  Pada class StackTugasMahasiswa, buat method isEmpty bertipe boolean untuk mengecek apakah 
+
+tumpukan tugas masih kosong 
+
+10. Untuk dapat menambahkan  berkas tugas ke dalam tumpukan  Stack, maka buat method  push. 
+
+Method ini menerima parameter mhs yang berupa object dari class Mahasiswa 
+
+11. Penilaian tugas mahasiswa yang dilakukan oleh dosen dilakukan dengan menggunakan method 
+
+pop untuk mengeluarkan tugas yang akan dinilai. Method ini tidak menerima parameter apapun 
+
+namun mempunyai nilai kembalian berupa object dari class Mahasiswa 
+
+Tim Ajar Algoritma dan Struktur Data 2024-2025 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2024-2025 
+
+Catatan:  Apabila  diperlukan  informasi  mengenai  data  mahasiswa  yang  diambil,  maka  tipe 
+
+kembalian harus berupa object Mahasiswa. Sebaliknya, tipe kembalian void dapat digunakan jika 
+
+data mahasiswa yang dikeluarkan tidak akan diolah atau digunakan lagi 
+
+12. Buat  method  peek  untuk  dapat  mengecek  tumpukan  tugas  mahasiswa  yang  berada  di  posisi 
+
+paling atas 
+
+13. Tambahkan method print untuk dapat menampilkan semua daftar tugas mahasiswa pada Stack 
+
+C.  Class Utama 
+
+14. Buat file baru, beri nama MahasiswaDemo<NoAbsen>.java 
+
+15. Tuliskan struktur dasar bahasa pemrograman Java yang terdiri dari fungsi main 
+
+16. Di  dalam  fungsi  main,  lakukan  instansiasi  object  StackTugasMahasiswa  bernama  stack  dengan 
+
+nilai parameternya adalah 5. 
+
+17. Deklarasikan Scanner dengan nama variabel scan dan variabel pilih bertipe int 
+
+18. Tambahkan menu untuk memfasilitasi pengguna dalam memilih operasi Stack dalam mengelola 
+
+data tugas mahasiswa menggunakan struktur perulangan do-while 
+
+Tim Ajar Algoritma dan Struktur Data 2024-2025 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+4 
+
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2024-2025 
+
+19. Commit dan push kode program ke Github 
+
+20. Compile dan run program. 
+
+2.1.2  Verifikasi Hasil Percobaan 
+
+Cocokkan hasil compile kode program Anda dengan gambar berikut ini.  
+
+Tim Ajar Algoritma dan Struktur Data 2024-2025 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+5 
+
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2024-2025 
+
+Tim Ajar Algoritma dan Struktur Data 2024-2025 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+6 
+
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2024-2025 
+
+2.1.3  Pertanyaan 
+
+1.  Lakukan perbaikan pada kode program, sehingga keluaran yang dihasilkan sama dengan verifikasi 
+
+hasil percobaan! Bagian mana yang perlu diperbaiki? 
+
+2.  Berapa banyak data tugas mahasiswa yang dapat ditampung di dalam Stack? Tunjukkan potongan 
+
+kode programnya! 
+
+3.  Mengapa  perlu  pengecekan  kondisi  !isFull()  pada method  push?  Kalau kondisi  if-else  tersebut 
+
+dihapus, apa dampaknya? 
+
+4.  Modifikasi  kode  program  pada  class  MahasiswaDemo  dan  StackTugasMahasiswa  sehingga 
+
+pengguna juga dapat melihat mahasiswa yang pertama kali mengumpulkan tugas melalui operasi 
+
+lihat tugas terbawah! 
+
+5.  Tambahkan method untuk dapat menghitung berapa banyak tugas yang sudah dikumpulkan saat 
+
+ini, serta tambahkan operasi menunya! 
+
+6.  Commit dan push kode program ke Github 
+
+2.2  Percobaan 2: Konversi Nilai Tugas ke Biner  
+
+Waktu Percobaan: 60 Menit 
+
+Sampai tahap ini, proses pengelolaan data tugas mahasiswa menggunakan konsep Stack telah 
+
+berhasil dibuat pada Percobaan 1. Selanjutnya, pada Percobaan 2 ini ditambahkan method baru yang 
+
+berfungsi  untuk  mengonversi  nilai  tugas  bertipe  int  ke  dalam  bentuk  biner  setelah  tugas  tersebut 
+
+diberi nilai dan dikeluarkan dari Stack. 
+
+Tim Ajar Algoritma dan Struktur Data 2024-2025 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+7 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2024-2025 
+
+2.2.1 
+
+Langkah-langkah Percobaan 
+
+1.  Buka kembali file StackTugasMahasiswa<NoAbsen>.java 
+
+2.  Tambahkan method konversiDesimalKeBiner dengan menerima parameter kode bertipe int 
+
+Pada method ini, terdapat penggunaan StackKonversi yang merupakan penerapan Stack, sama 
+
+halnya  dengan  class  StackTugasMahasiswa.  Hal  ini  bertujuan  agar  Stack  untuk  mahasiswa 
+
+berbeda  dengan  Stack  yang  digunakan  untuk  biner  karena  tipe  data  yang  digunakan  berbeda. 
+
+Oleh karena itu, buat file baru bernama StackKonversi<NoAbsen>.java 
+
+Catatan:  Perlu  diingat  bahwa  pada  dasarnya  semua  class  Stack  mempunyai  operasi  (method) 
+
+yang  sama.  Hal  yang  membedakan  adalah  aktivitas  spesifik  yang  perlu  dilakukan,  misalnya 
+
+setelah menambah atau mengeluarkan data. 
+
+3.  Tambahkan empat method yaitu isEmpty, isFull, push, dan pull sebagai operasi utama Stack pada 
+
+class StackKonversi 
+
+Tim Ajar Algoritma dan Struktur Data 2024-2025 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+8 
+
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2024-2025 
+
+4.  Agar nilai tugas mahasiswa dikonversi ke dalam bentuk biner setelah dilakukan penilaian, maka 
+
+tambahkan baris kode program pada method pop di class MahasiswaDemo 
+
+5.  Compile dan run program. 
+
+6.  Commit dan push kode program ke Github 
+
+2.2.2  Verifikasi Hasil Percobaan 
+
+Cocokkan hasil compile kode program Anda dengan gambar berikut ini. 
+
+Tim Ajar Algoritma dan Struktur Data 2024-2025 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+9 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2024-2025 
+
+2.2.3  Pertanyaan 
+
+1.  Jelaskan alur kerja dari method konversiDesimalKeBiner! 
+
+2.  Pada  method  konversiDesimalKeBiner,  ubah  kondisi  perulangan  menjadi  while  (kode  !=  0), 
+
+bagaimana hasilnya? Jelaskan alasannya! 
+
+2.4 Latihan Praktikum 
+
+Waktu : 90 Menit 
+
+Mahasiswa mengajukan surat izin (karena sakit atau keperluan lain) setiap kali tidak mengikuti 
+
+perkuliahan.  Surat  terakhir  yang  masuk  akan  diproses  atau  divalidasi  lebih  dulu  oleh  admin Prodi. 
+
+Perhatikan class diagram berikut. 
+
+Surat<NoAbsen> 
+
+idSurat: String 
+namaMahasiswa: String 
+kelas: String 
+jenisIzin: char 
+durasi: int 
+Surat<NoAbsen>() 
+Surat<NoAbsen>(idSurat:  String,  namaMahasiswa:  String,  kelas:  String,  jenisIzin:  char, 
+
+durasi: int) 
+
+Atribut  jenisIzin  digunakan  untuk  menyimpan  keterangan  ijin  mahasiswa  (S:  sakit  atau  I:  izin 
+
+keperluan lain) dan durasi untuk menyimpan lama waktu izin. 
+
+Berdasarkan  class  diagram  tersebut,  implementasikan  class  Surat  dan  tambahkan  class 
+
+StackSurat untuk mengelola data Surat. Pada class yang memuat method main, buat pilihan menu 
+
+berikut: 
+
+1.  Terima Surat Izin untuk memasukkan data surat 
+
+2.  Proses Surat Izin untuk memproses atau memverifikasi surat 
+
+3.  Lihat Surat Izin Terakhir untuk melihat surat teratas 
+
+4.  Cari Surat untuk mencari ada atau tidaknya surat izin berdasarkan nama mahasiswa 
+
+Tim Ajar Algoritma dan Struktur Data 2024-2025 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+10 
+
+ 
+ 
+ 
+ 
+
