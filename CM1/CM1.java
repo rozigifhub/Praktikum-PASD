@@ -12,6 +12,8 @@ public class CM1 {
         System.out.println("4. Hitung keterlambatan dan total denda");
         System.out.println("5. Urutkan peminjaman berdasarkan denda terbesar");
         System.out.println("6. Cari peminjaman berdasarkan NIM");
+        System.out.println("7. Cari peminjaman berdasarkan Nama");
+        System.out.println("8. Menampilkan tahun buku terbesar ");
         System.out.println("0. Keluar");
         System.out.print("Pilih menu: ");
     }
@@ -55,6 +57,12 @@ public class CM1 {
                     String nim = sc.nextLine().trim();
                     sistem.cariPeminjamanByNim(nim);
                     break;
+                case 7:
+                    System.out.println("Masukkan Nama yang dicari");
+                    String nama = sc.nextLine().trim();
+                    sistem.cariPeminjamanLinearSearch(nama);
+                case 8:
+                    sistem.tampilkanTahunBukuTerbesar();
                 case 0:
                     System.out.println("Keluar.");
                     break;

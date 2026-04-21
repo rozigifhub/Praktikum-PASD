@@ -100,6 +100,14 @@ public class RuangBacaJTI23 {
             p.tampilDenganDenda();
         }
     }
+    public void tampilkanTahunBukuTerbesar(){
+        Buku23[] data = copyBuku();
+        insertionSortDataBukuDesc(data);
+        
+        for(Buku23 p : data){
+            p.tampil();
+        }
+    }
 
     public void cariPeminjamanByNim(String nim) {
         Peminjaman23[] data = copyPeminjaman();
@@ -144,6 +152,20 @@ public class RuangBacaJTI23 {
             data[j] = temp;
         }
     }
+    Buku23[] copyBuku() {
+        return Arrays.copyOf(daftarBuku, daftarBuku.length);
+    }
+    void insertionSortDataBukuDesc(Buku23[] data) {
+        for (int i = 1; i < data.length; i++) {
+            Buku23 temp = data[i];
+            int j = i;
+            while (j > 0 && data[j - 1].tahunTerbit < temp.tahunTerbit) {
+                data[j] = data[j - 1];
+                j--;
+            }
+            data[j] = temp;
+        }
+    }
 
     void insertionSortByNimAsc(Peminjaman23[] data) {
         for (int i = 1; i < data.length; i++) {
@@ -175,4 +197,24 @@ public class RuangBacaJTI23 {
         }
         return -1;
     }
+    void linearSearchByNama(Peminjaman23[] data, String Nama){
+        boolean ketemu = false;
+
+        System.out.printf("%-6s %-10s %-15s %-5s %-5s %s%n",
+        "NIM", "Nama", "Judul Buku", "Lama", "Late", "Denda");
+        for(int i = 0; i < data.length; i++){
+            if(data[i].mahasiswa.nama.equalsIgnoreCase(Nama)){
+                data[i].tampilTelatDgnDenda();
+                ketemu = true;
+            }
+        }
+        if(!ketemu){
+            System.out.println("Data tidak ditemukan");
+        }
+    }
+    public void cariPeminjamanLinearSearch(String Nama){
+        Peminjaman23[] data = copyPeminjaman();
+        linearSearchByNama(data, Nama);
+    }
+    
 }

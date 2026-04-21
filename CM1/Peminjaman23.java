@@ -31,4 +31,9 @@ public class Peminjaman23 {
         System.out.printf("%-6s %-10s %-15s %4d %4d Rp %,d%n", mahasiswa.nim, mahasiswa.nama, buku.judul, lamaPinjamHari,
                 hariTerlambat, totalDenda);
     }
+    void tampilTelatDgnDenda(){
+        if (hariTerlambat > 0){
+            tampilDenganDenda();
+        }
+    }
 }
