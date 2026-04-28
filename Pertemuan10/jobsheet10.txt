@@ -1,0 +1,440 @@
+Algoritma dan Struktur Data 2025- 2026 
+
+JOBSHEET X 
+QUEUE 
+
+1. Tujuan Praktikum  
+
+Setelah melakukan materi praktikum ini, mahasiswa mampu: 
+
+1.  Mengenal struktur data Queue 
+
+2.  Membuat dan mendeklarasikan struktur data Queue 
+
+3.  Menerapkan algoritma Queue dengan menggunakan array 
+
+2. Praktikum 1 
+
+2.1 Percobaan 1 : Operasi Dasar Queue 
+
+Waktu percobaan : 90 menit 
+
+Pada  percobaan  ini,  kita  akan  menerapkan  operasi  dasar  pada  algoritma  Queue.  Perhatikan 
+
+Diagram Class Queue berikut ini: 
+
+Queue 
+
+data: int[] 
+front: int 
+rear: int 
+size: int 
+max: int 
+Queue(n: int) 
+isFull(): boolean 
+isEmpty(): boolean 
+enqueue(dt: int): void 
+dequeue(): int 
+peek: void 
+print(): void 
+clear(): void 
+
+Berdasarkan diagram class tersebut, akan dibuat program class Queue dalam Java. 
+
+2.1.1. Langkah-langkah Percobaan 
+
+1.  Buat  folder  baru  bernama  P1Jobsheet10  di  dalam  repository  Praktikum  ASD,  kemudian  buat 
+
+class baru dengan nama Queue. 
+
+2.  Tambahkan  atribut-atribut  Queue  sesuai  diagram  class,  kemudian 
+
+tambahkan  pula 
+
+konstruktornya seperti berikut ini : 
+
+Tim Ajar Algoritma dan Struktur Data 2025- 2026 
+
+Jurusan Teknologi Informasi- Politeknik Negeri Malang 
+
+1 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025- 2026 
+
+3.  Buat method IsEmpty bertipe boolean yang digunakan untuk mengecek apakah queue kosong. 
+
+4.  Buat method IsFull bertipe boolean yang digunakan untuk mengecek apakah queue sudah penuh. 
+
+5.  Buat method peek bertipe void untuk menampilkan elemen queue pada posisi paling depan. 
+
+6.  Buat method print bertipe void untuk menampilkan seluruh elemen pada queue mulai dari posisi 
+
+front sampai dengan posisi rear. 
+
+Tim Ajar Algoritma dan Struktur Data 2025- 2026 
+
+Jurusan Teknologi Informasi- Politeknik Negeri Malang 
+
+2 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025- 2026 
+
+7.  Buat method clear bertipe void untuk menghapus semua elemen pada queue 
+
+8.  Buat method Enqueue bertipe void untuk menambahkan isi queue dengan parameter dt yang 
+
+bertipe integer 
+
+9.  Buat method Dequeue bertipe int untuk mengeluarkan data pada queue di posisi belakang 
+
+Tim Ajar Algoritma dan Struktur Data 2025- 2026 
+
+Jurusan Teknologi Informasi- Politeknik Negeri Malang 
+
+3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025- 2026 
+
+10. Selanjutnya,  buat  class  baru  dengan  nama  QueueMain  tetap  pada  package  Praktikum1.  Buat 
+
+method menu bertipe void untuk memilih menu program pada saat dijalankan. 
+
+11. Buat fungsi main, kemudian deklarasikan Scanner dengan nama sc. 
+
+12. Buat  variabel  n  untuk  menampung  masukan  berupa  jumlah  maksimal  elemen  yang  dapat 
+
+disimpan pada queue. 
+
+13. Lakukan  instansiasi  objek  Queue  dengan  nama  Q  dengan  mengirimkan  parameter  n  sebagai 
+
+kapasitas elemen queue 
+
+14. Deklarasikan  variabel  dengan  nama  pilih  bertipe  integer  untuk  menampung  pilih  menu  dari 
+
+pengguna. 
+
+15. Lakukan perulangan menggunakan do-while untuk menjalankan program secara terus menerus 
+
+sesuai  masukan  yang  diberikan.  Di  dalam  perulangan  tersebut,  terdapat  pemilihan  kondisi 
+
+menggunakan switch-case untuk menjalankan operasi queue sesuai dengan masukan pengguna. 
+
+Tim Ajar Algoritma dan Struktur Data 2025- 2026 
+
+Jurusan Teknologi Informasi- Politeknik Negeri Malang 
+
+4 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025- 2026 
+
+16. Compile dan jalankan class QueueMain, kemudian amati hasilnya. 
+
+2.1.2. Verifikasi Hasil Percobaan 
+
+Samakan hasil compile kode program Anda dengan gambar berikut ini. 
+
+Tim Ajar Algoritma dan Struktur Data 2025- 2026 
+
+Jurusan Teknologi Informasi- Politeknik Negeri Malang 
+
+5 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025- 2026 
+
+2.1.3. Pertanyaan 
+
+1.  Pada konstruktor, mengapa nilai awal atribut front dan rear bernilai  -1, sementara atribut size 
+
+bernilai 0? 
+
+2.  Pada method Enqueue, jelaskan maksud dan kegunaan dari potongan kode berikut! 
+
+3.  Pada method Dequeue, jelaskan maksud dan kegunaan dari potongan kode berikut! 
+
+4.  Pada method print, mengapa pada proses perulangan variabel i tidak dimulai dari 0 (int i=0), 
+
+melainkan int i=front? 
+
+5.  Perhatikan kembali method print, jelaskan maksud dari potongan kode berikut! 
+
+6.  Tunjukkan potongan kode program yang merupakan queue overflow! 
+
+7.  Pada saat terjadi queue overflow dan queue underflow, program tersebut tetap dapat berjalan 
+
+dan hanya menampilkan teks informasi. Lakukan modifikasi program sehingga pada saat terjadi 
+
+queue overflow dan queue underflow, program dihentikan! 
+
+Tim Ajar Algoritma dan Struktur Data 2025- 2026 
+
+Jurusan Teknologi Informasi- Politeknik Negeri Malang 
+
+6 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025- 2026 
+
+2.2. Percobaan 2 : Antrian Layanan Akademik 
+
+Waktu percobaan : 90 menit 
+
+Pada  percobaan  ini,  kita  akan  membuat  program  yang  mengilustrasikan  Layanan  pada  Admin 
+
+Akademik. Perhatikan Diagram Class berikut ini: 
+
+Mahasiswa 
+
+nim:String 
+
+nama: String 
+
+prodi: String 
+
+kelas: String 
+
+Mahasiswa(nim: String, nama: String, prodi: String, kelas: String) 
+
+void tampilkanData() 
+
+2.2.1. Langkah-langkah Percobaan 
+
+Berdasarkan diagram class tersebut, akan dibuat program class Mahasiswa dalam Java. 
+
+1.  Buat  folder  baru  bernama  P2Jobsheet10  di  dalam  repository  Praktikum  ASD,  kemudian  buat 
+
+class baru dengan nama Mahasiswa. 
+
+2.  Tambahkan  atribut-atribut  Nasabah  seperti  pada  Class  Diagram,  kemudian  tambahkan  pula 
+
+konstruktornya seperti gambar berikut ini. 
+
+Dan tambahkan method tampilkanData berikut : 
+
+3.  Salin kode program class Queue pada Praktikum 1 untuk digunakan kembali pada Praktikum 2 
+
+ini, ganti nama class-nya dengan AntrianLayanan.  Karena pada Praktikum 1, data yang disimpan 
+
+pada  queue  hanya  berupa  array  bertipe  integer,  sedangkan  pada  Praktikum  2  data  yang 
+
+digunakan adalah object, maka perlu dilakukan modifikasi pada class AntrianLayanan tersebut. 
+
+Tim Ajar Algoritma dan Struktur Data 2025- 2026 
+
+Jurusan Teknologi Informasi- Politeknik Negeri Malang 
+
+7 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025- 2026 
+
+4.  Lakukan  modifikasi  pada  class  AntrianLayanan  dengan  mengubah  tipe  int[]  data  menjadi 
+
+Mahasiswa[]  data  karena  pada  kasus  ini  data  yang  akan  disimpan  berupa  object  Mahasiswa. 
+
+Modifikasi perlu dilakukan pada atribut, method Enqueue, dan method Dequeue. 
+
+5.  Berikutnya method peek dan print yaitu untuk menampilkan data antrian layanan paling depan 
+
+dan menampilkan semua data antrian layanan. 
+
+Tim Ajar Algoritma dan Struktur Data 2025- 2026 
+
+Jurusan Teknologi Informasi- Politeknik Negeri Malang 
+
+8 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025- 2026 
+
+Ditambahkan dengan method getJumlahAntrian yaitu menampilkan nilai size  
+
+6.  Selanjutnya, buat class baru dengan nama LayananAkademikSIAKAD tetap pada package yang 
+
+sama. Buat fungsi main, deklarasikan Scanner dengan nama sc. 
+
+7.  Kemudian 
+
+lakukan 
+
+instansiasi  objek  AntrianLayanan  dengan  nama  antrian  dan  nilai 
+
+parameternya adalah nilai maksimal antrian yang ditentukan (misal sama dengan 5). 
+
+8.  Deklarasikan variabel dengan nama  pilihan bertipe integer untuk menampung pilih menu dari 
+
+pengguna. 
+
+9.  Tambahkan  kode  berikut  untuk  melakukan  perulangan  menu  sesuai  dengan  masukan  yang 
+
+diberikan oleh pengguna. 
+
+Tim Ajar Algoritma dan Struktur Data 2025- 2026 
+
+Jurusan Teknologi Informasi- Politeknik Negeri Malang 
+
+9 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025- 2026 
+
+10. Compile dan jalankan class LayananAkademikSIAKAD, kemudian amati hasilnya. 
+
+2.2.2 Verifikasi Hasil Percobaan 
+
+Samakan hasil compile kode program Anda dengan gambar berikut ini. 
+
+Tim Ajar Algoritma dan Struktur Data 2025- 2026 
+
+Jurusan Teknologi Informasi- Politeknik Negeri Malang 
+
+10 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025- 2026 
+
+Tim Ajar Algoritma dan Struktur Data 2025- 2026 
+
+Jurusan Teknologi Informasi- Politeknik Negeri Malang 
+
+11 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025- 2026 
+
+2.2.3 Pertanyaan 
+
+Lakukan  modifikasi  program  dengan  menambahkan  method  baru  bernama  LihatAkhir  pada  class 
+
+AntrianLayanan yang digunakan untuk mengecek antrian yang berada di posisi belakang. Tambahkan 
+
+pula  daftar  menu  6.  Cek  Antrian  paling  belakang  pada  class  LayananAkademikSIAKAD  sehingga 
+
+method LihatAkhir dapat dipanggil! 
+
+2.3 Tugas 
+
+Waktu : 120 Menit 
+
+Buatlah  program  antrian  untuk  mengilustasikan  antrian  persetujuan  Kartu  Rencana  Studi  (KRS) 
+
+Mahasiswa oleh Dosen Pembina Akademik (DPA). Ketika seorang mahasiswa akan mengantri, maka 
+
+dia harus  mendaftarkan  datanya  (data  mahasiswa  seperti pada  praktikum 2).  Gunakan class untuk 
+
+antrian seperti pada Praktikum 1 dan 2, dengan method-method yang berfungsi : 
+
+•  Cek antrian kosong, Cek antrian penuh, Mengosongkan antrian. 
+
+•  Menambahkan antrian, Memanggil antrian untuk proses KRS – setiap 1x panggilan terdiri dari 2 
+
+mahasiswa (pada antrian no 1 dan 2) 
+
+•  Menampilkan semua antrian, Menampilkan 2 antrian terdepan, Menampilkan antrian paling akhir. 
+
+•  Cetak jumlah antrian, Cetak jumlah yang sudah melakukan proses KRS 
+
+•  Jumlah antrian maximal 10, jumlah yang ditangani masing-masing DPA 30 mahasiswa, cetak jumlah 
+
+mahasiswa yang belum melakukan proses KRS.  
+
+Gambarkan Diagram Class untuk antriannya. Implementasikan semua method menggunakan menu 
+
+pilihan pada fungsi main.  
+
+Tim Ajar Algoritma dan Struktur Data 2025- 2026 
+
+Jurusan Teknologi Informasi- Politeknik Negeri Malang 
+
+12 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
