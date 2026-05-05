@@ -1,0 +1,289 @@
+Algoritma dan Struktur Data 2025-2026: D4 Teknik Informatika 
+
+JOBSHEET XI 
+LINKED LIST 
+
+1. Tujuan Praktikum  
+
+Setelah melakukan materi praktikum ini, mahasiswa mampu: 
+
+1.  Membuat struktur data linked list 
+
+2.  Membuat linked list pada program 
+
+3.  Membedakan permasalahan apa yang dapat diselesaikan menggunakan linked list 
+
+2. Praktikum 
+
+2.1 Pembuatan Single Linked List 
+
+       Waktu percobaan : 30 menit 
+
+Didalam  praktikum  ini,  kita  akan  mempraktekkan  bagaimana  membuat  Single  Linked  List  dengan 
+
+representasi data berupa Node, pengaksesan linked list dan metode penambahan data. 
+
+1.  Pada  Project  yang  sudah  dibuat  pada  Minggu  sebelumnya,  buat  package  dengan  nama 
+
+Pertemuan12 
+
+2.  Tambahkan class-class berikut: 
+
+a.  Mahasiswa00.java 
+
+b.  Node00.java 
+
+c.  SingleLinkedList00.java 
+
+d.  SLLMain00.java 
+
+Ganti 00 dengan nomer Absen Anda 
+
+3. 
+
+Implementasikan Class Mahasiswa00 sesuai dengan diagram class berikut ini : 
+
+Mahasiswa 
+
+nim: String 
+nama: String 
+kelas: String 
+ipk: double 
+Mahasiswa() 
+Mahasiswa(nm: String, name: String, kls: String, ip: 
+double) 
+tampilInformasi(): void 
+
+4. 
+
+Implementasi class Node seperti gambar berikut ini 
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026 D4 Teknik Informatika 
+
+1 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025-2026: D4 Teknik Informatika 
+
+5.  Tambahkan attribute head dan tail pada class SingleLinkedList 
+
+6.  Sebagai  langkah  berikutnya,  akan  diimplementasikan  method-method  yang  terdapat  pada 
+
+SingleLinkedList. 
+
+7.  Tambahkan method isEmpty(). 
+
+8. 
+
+Implementasi method untuk mencetak dengan menggunakan proses traverse. 
+
+9. 
+
+Implementasikan method addFirst(). 
+
+10. Implementasikan method addLast(). 
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026 D4 Teknik Informatika 
+
+2 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025-2026: D4 Teknik Informatika 
+
+11. Implementasikan method insertAfter, untuk memasukkan node yang memiliki data 
+
+input setelah node yang memiliki data key. 
+
+12. Tambahkan method penambahan node pada indeks tertentu. 
+
+13. Pada class SLLMain00, buatlah  fungsi main, kemudian buat object dari class 
+
+SingleLinkedList. 
+
+14. Buat empat object mahasiswa dengan nama mhs1, mhs2, mhs3, mhs4 kemudian isi data 
+
+setiap object melalui konstruktor. 
+
+15. Tambahkan Method penambahan data dan pencetakan data di setiap penambahannya agar 
+
+terlihat perubahannya.  
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026 D4 Teknik Informatika 
+
+3 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025-2026: D4 Teknik Informatika 
+
+2.1.1 
+
+Verifikasi Hasil Percobaan 
+
+Cocokkan hasil compile kode program anda dengan gambar berikut ini. 
+
+2.1.2 
+
+Pertanyaan 
+
+1.  Mengapa hasil compile kode program di baris pertama menghasilkan “Linked List Kosong”? 
+
+2.  Jelaskan kegunaan variable temp secara umum pada setiap method! 
+
+3.  Lakukan modifikasi agar data dapat ditambahkan dari keyboard! 
+
+2.2 Modifikasi Elemen pada Single Linked List 
+
+Waktu percobaan : 30 menit 
+
+Didalam praktikum ini, kita akan mempraktekkan bagaimana mengakses elemen, mendapatkan 
+
+indeks dan melakukan penghapusan data pada Single Linked List.:  
+
+2.2.1 Langkah-langkah Percobaan 
+
+Implementasikan method untuk mengakses data dan indeks pada linked list 
+
+1. 
+2.  Tambahkan method untuk mendapatkan data pada indeks tertentu pada class Single 
+
+Linked List 
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026 D4 Teknik Informatika 
+
+4 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025-2026: D4 Teknik Informatika 
+
+3. 
+
+Implementasikan method indexOf. 
+
+4.  Tambahkan method removeFirst pada class SingleLinkedList 
+
+5.  Tambahkan  method  untuk  menghapus  data  pada  bagian  belakang  pada  class 
+
+SingleLinkedList 
+
+6.  Sebagai langkah berikutnya, akan diimplementasikan method remove 
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026 D4 Teknik Informatika 
+
+5 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+ 
+ 
+ 
+ 
+  
+ 
+ 
+Algoritma dan Struktur Data 2025-2026: D4 Teknik Informatika 
+
+7. 
+
+Implementasi method untuk menghapus node dengan menggunakan index. 
+
+8.  Kemudian, coba lakukan pengaksesan dan penghapusan data di method main pada class 
+
+SLLMain dengan menambahkan kode berikut 
+
+9.  Jalankan class SLLMain  
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026 D4 Teknik Informatika 
+
+6 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Algoritma dan Struktur Data 2025-2026: D4 Teknik Informatika 
+
+2.2.2  Verifikasi Hasil Percobaan 
+
+Cocokkan hasil compile kode program anda dengan gambar berikut ini. 
+
+2.2.3  Pertanyaan 
+
+1.  Mengapa digunakan keyword break pada fungsi remove? Jelaskan! 
+
+2.  Jelaskan kegunaan kode dibawah pada method remove 
+
+3. Tugas 
+
+Waktu pengerjaan : 50 menit 
+
+Buatlah implementasi program antrian layanan unit kemahasiswaan sesuai dengan berikut ini :  
+
+a. 
+Implementasi antrian menggunakan Queue berbasis Linked List! 
+b.  Program merupakan proyek baru bukan modifikasi dari percobaan 
+c.  Ketika seorang mahasiswa akan mengantri, maka dia harus mendaftarkan datanya 
+d.  Cek antrian kosong, Cek antrian penuh, Mengosongkan antrian. 
+e.  Menambahkan antrian 
+f.  Memanggil antrian  
+g.  Menampilkan antrian terdepan dan antrian paling akhir 
+h.  Menampilkan jumlah mahasiswa yang masih mengantre. 
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026 D4 Teknik Informatika 
+
+7 
+
+Jurusan Teknologi Informasi-Politeknik Negeri Malang 
+
+ 
+ 
+ 
+ 
+ 
+  
+ 
+
