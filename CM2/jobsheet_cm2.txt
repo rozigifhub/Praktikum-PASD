@@ -1,0 +1,166 @@
+Algoritma dan Struktur Data 2026
+
+
+                                        JOBSHEET
+                                      Studi Kasus 2
+
+1. Tujuan
+        •   Mahasiswa mampu menyelesaikan permasalahan studi kasus dengan
+            menerapkan konsep Struktur Data Linier
+        •   Mahasiswa mampu menerapkan algoritma sorting dan searching sesuai studi
+            kasus
+2. Praktikum
+    Waktu Pengerjaan : 200 menit
+
+    Instruksi Pengerjaan:
+    Setiap mahasiswa membuat kode program berdasarkan studi kasus yang telah diberikan.
+    Pastikan program berjalan dengan baik, mengimplementasikan semua fitur yang diminta,
+    dan dinamis (menggunakan menu untuk memilih fitur).
+    Soal Studi Kasus:
+    Pada jam makan siang, resto Royal Delish memiliki banyak pelanggan yang datang secara
+    bersamaan.
+    Kasir mengalami kesulitan mencatat antrean pembeli dan pesanan makanan karena
+    proses masih dilakukan secara manual.
+    Akibatnya:
+        • Nomor antrean sering tertukar.
+        • Data pembeli tidak tercatat dengan rapi.
+        • Pesanan makanan sulit direkap.
+    Untuk mengatasi masalah tersebut, dibuatlah sistem informasi antrean berbasis Linked
+    List/Double Linked List.
+    Alur sistem:
+        • Pembeli datang dan mengambil nomor antrean.
+        • Data pembeli dimasukkan ke sistem.
+        • Ketika dipanggil, pembeli melakukan pemesanan makanan.
+        • Data pesanan disimpan.
+        • Sistem dapat menampilkan laporan pesanan dan total pendapatan restoran.
+
+
+
+
+Pada sistem ini terdapat dua class utama, yaitu:
+
+Team Teaching Algoritma dan Struktur Data 2026
+Politeknik Negeri Malang
+Algoritma dan Struktur Data 2026
+
+
+ Pembeli                                    Pesanan
+ namaPembeli : String                       kodePesanan: int
+ NoHp : String                              namaPesanan: String
+ Pembeli(String b, String c)                harga : int
+                                            Pesanan(int a, String b, int d)
+
+
+Gambar di atas merupakan contoh diagram class dari Pembeli dan Pesanan. Atribut dan
+method boleh ditambah.
+
+Fitur yang Harus Tersedia :
+    1. Tambah Antrian
+        Pada saat memilih menu tambah antrean, sistem akan menambahkan nomor antrean
+        sesuai dengan urutan antrean yang ada. Nomor antrean bisa dibuat otomatis.
+        Kemudian sistem akan meminta input berupa nama pembeli, dan nomor hp. Data
+        yang sudah diinputkan akan disimpan di linked list.
+        Contoh:
+
+
+
+
+      Catatan : gunakan penambahan data melalui pembuatan object menggunakan
+      konstruktor untuk menghindari input data melalui keyboard yang memakan waktu.
+   2. Cetak Antrian
+      Menu ini akan menampilkan seluruh antrian yang ada pada linked list
+      Contoh :
+
+
+
+
+   3. Hapus Antrian
+
+Team Teaching Algoritma dan Struktur Data 2026
+Politeknik Negeri Malang
+Algoritma dan Struktur Data 2026
+
+
+      Hapus antrean harus sesuai dengan No. antrean. Pada menu hapus antrean, artinya
+      pembeli telah menuju kasir untuk memesan makanan. Sehingga pada menu ini harus
+      diinputkan makanan yang dipesan oleh pembeli.
+
+
+
+
+      maka antrian harus berkurang. Contoh dibawah ini telah ada 2 pembeli yang memesan
+      makanan sehingga antrian tersisa 2
+
+
+
+
+   4. Laporan pesanan
+      Menu ini digunakan untuk menampilkan seluruh pesanan yang sudah masuk. Data
+      pesanan harus ditampilkan terurut berdasarkan nama pesanan.
+
+
+
+
+Rubrik Penilaian
+Team Teaching Algoritma dan Struktur Data 2026
+Politeknik Negeri Malang
+Algoritma dan Struktur Data 2026
+
+
+Komponen : Penilaian Kode : 30% + Penilaian Tes Praktik CM : 70%
+Rubrik Penilaian Kode
+              Aspek
+   No                       Bobot        Skor 1           Skor 2            Skor 3
+             Penilaian
+                                                                         Menggunakan
+           Implementasi                   Tidak        Menggunakan
+                                                                         Double Linked
+    1      Struktur Data    20%       menggunakan      Single Linked
+                                                                           List dengan
+              Antrean                  linked list          List
+                                                                              benar
+                                                                         Menggunakan
+           Implementasi                   Tidak        Menggunakan
+                                                                         Double Linked
+    2      Struktur Data    20%       menggunakan      Single Linked
+                                                                           List dengan
+              Pesanan                  linked list          List
+                                                                              benar
+           Fitur Tambah                                  Berjalan       Berjalan dengan
+    3                       10%       Tidak berjalan
+              Antrian                                    sebagian              baik
+                                                                         Menampilkan
+            Fitur Cetak                                Menampilkan
+    4                       10%        Tidak tampil                       seluruh data
+              Antrian                                  sebagian data
+                                                                         dengan benar
+           Fitur Hapus
+                                                         Berjalan       Berjalan sesuai
+    5     Antrian & Input   15%       Tidak berjalan
+                                                         sebagian             soal
+             Pesanan
+             Laporan
+                                        Tidak ada      Sorting kurang   Sorting berjalan
+    6       Pesanan &       20%
+                                         sorting            tepat            benar
+              Sorting
+
+
+Ketentuan Tambahan
+Program tidak boleh menggunakan Collection Framework seperti:
+   • ArrayList
+   • LinkedList
+   • Queue
+   • Stack
+   • Collections.sort()
+   • Sorting dilakukan secara manual.
+Program wajib menggunakan object dan konstruktor.
+Penggunaan Double Linked List pada kedua struktur data akan memperoleh nilai maksimal
+pada aspek struktur data.
+
+
+
+
+Team Teaching Algoritma dan Struktur Data 2026
+Politeknik Negeri Malang
+
