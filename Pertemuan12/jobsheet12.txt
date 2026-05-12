@@ -1,0 +1,267 @@
+Algoritma dan Struktur Data 2025-2026
+
+
+
+                                     JOBSHEET XII
+                                   Double Linked List
+
+12.1 Tujuan Praktikum
+        Setelah melakukan praktikum ini, mahasiswa mampu:
+    1. Memahami algoritma double linked list;
+    2. Membuat dan mendeklarasikan struktur algoritma double linked list;
+    3. Menerapkan operasi penambahan, pencarian, dan penghapusan data pada Double
+       Linked List.
+
+12.2 Percobaan 1: Operasi Penambahan pada Double Linked List
+12.2.1 Langkah-Langkah Percobaan
+    Pada percobaan 1 ini akan dibuat class Mahasiswa, Node, dan DoubleLinkedList. Class
+tersebut digunakan untuk mengimplementasikan struktur data Double Linked List beserta
+beberapa operasi dasar seperti:
+ • penambahan data di awal linked list,
+ • penambahan data di akhir linked list,
+ • pencarian data,
+ • penyisipan node setelah data tertentu,
+ • dan menampilkan isi linked list.
+    Langkah-langkah percobaan untuk menerapkan beberapa operasi dasar pada Double
+Linked List adalah sebagai berikut:
+ 1. Perhatikan diagram class Mahasiswa<noPresensi>, Node<noPresensi> dan class
+    DoublelinkedList<noPresensi> berikut. Diagram class berikut digunakan sebagai acuan
+    dalam pembuatan program Double Linked List. Perhatikan hubungan antar class dan
+    atribut yang digunakan pada setiap node.
+                                    Mahasiswa<noPresensi>
+         nim: String
+         nama: String
+         kelas: String
+         ipk: Double
+         Mahasiswa(String nim, String nama, String kelas, Double IPK)
+         tampil()
+
+                                        Node<noPresensi>
+         data: Mahasiswa
+         prev: Node
+         next: Node
+         Node(prev:null, data: Mahasiswa data, next: null)
+
+
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026
+Jurusan Teknologi Informasi-Politeknik Negeri Malang                                 1
+Algoritma dan Struktur Data 2025-2026
+
+
+
+                                  DoubleLinkedList<noPresensi>
+         head: Node
+         tail : Node
+         DoubleLinkedLists()
+         isEmpty(): boolean
+         addFirst (): void
+         addLast(): void
+         add(data: Mahasiswa, index: int): void
+         print(): void
+         removeFirst(): void
+         removeLast(): void
+         search(): null
+         insertAfter: void
+2. Pada Project yang sudah dibuat pada Minggu sebelumnya, buat folder atau package baru
+   bernama Jobsheet12 di dalam repository Praktikum ASD.
+   Catatan: Perhatikan setiap perubahan pointer prev dan next pada setiap operasi linked
+   list. Kesalahan perubahan pointer dapat menyebabkan node terputus atau linked list
+   tidak dapat ditelusuri dengan benar.
+3. Buat class di dalam paket tersebut dengan nama Mahasiswa<noPresensi>. Di dalam class
+   tersebut, deklarasikan atribut sesuai dengan diagram class di atas. Tambahkan
+   konstruktor untuk menginisialisasi seluruh atribut serta method tampil() untuk
+   menampilkan data mahasiswa.
+
+
+
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026
+Jurusan Teknologi Informasi-Politeknik Negeri Malang                                  2
+Algoritma dan Struktur Data 2025-2026
+
+
+
+4. Buat class di dalam paket tersebut dengan nama Node<noPresensi>. Di dalam class
+   tersebut, deklarasikan atribut data, prev, dan next sesuai diagram class. Selanjutnya
+   tambahkan konstruktor sesuai class diagram.
+
+
+
+
+5. Buatlah sebuah class baru bernama DoubleLinkedList<noPresensi> pada package yang
+   sama dengan Node. Pada class DoubleLinkedList tersebut, deklarasikan atribut head dan
+   tail pada class DoubleLinkedList.
+
+
+
+
+6. Selanjutnya, buat konstruktor pada class DoubleLinkedList.
+
+
+
+
+7. Buat method isEmpty(). Method isEmpty() digunakan untuk mengecek apakah linked list
+   masih kosong atau sudah memiliki node. Method ini akan bernilai true jika head masih
+   bernilai null.
+
+
+
+
+8. Kemudian, buat method addFirst(). Method addFirst() digunakan untuk menambahkan
+   node baru pada bagian awal linked list. Perhatikan perubahan pointer head dan prev
+   setelah node baru ditambahkan.
+
+
+
+
+9. Selain itu pembuatan method addLast() digunakan untuk menambahkan node baru pada
+   bagian akhir linked list. Perhatikan perubahan pointer tail dan next setelah proses
+   penambahan dilakukan.
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026
+Jurusan Teknologi Informasi-Politeknik Negeri Malang                                  3
+Algoritma dan Struktur Data 2025-2026
+
+
+
+
+10. Method insertAfter() digunakan untuk menyisipkan node baru setelah node yang
+    memiliki NIM tertentu. Perhatikan perubahan pointer next dan prev pada proses
+    penyisipan node. Urutan perubahan pointer harus benar agar hubungan antar node tidak
+    terputus.
+
+
+
+
+11. Untuk mencetak isi dari linked lists dibuat method print(). Method print() digunakan
+    untuk melakukan traversal dari node head hingga tail dan menampilkan seluruh isi linked
+    list.
+
+
+
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026
+Jurusan Teknologi Informasi-Politeknik Negeri Malang                                     4
+Algoritma dan Struktur Data 2025-2026
+
+
+
+
+12. Selanjutya buat class DoubleLinkedListMain<noPresensi> untuk mengeksekusi semua
+    method yang ada pada class DoubleLinkedList.
+
+
+
+
+13. Buatlah menu pilihan pada class DoubleLinkedListMain. Gunakan struktur perulangan
+    do-while agar program terus berjalan sampai pengguna memilih menu keluar.
+
+
+
+
+14. Tambahkan switch-case untuk menjalankan menu pilihan program.
+
+
+
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026
+Jurusan Teknologi Informasi-Politeknik Negeri Malang                               5
+Algoritma dan Struktur Data 2025-2026
+
+
+
+
+12.2.2 Verifikasi Hasil Percobaan
+     Pastikan program berhasil dijalankan dan menghasilkan output yang sesuai seperti pada
+gambar berikut. Coba lakukan beberapa kombinasi penambahan data untuk memastikan
+linked list berjalan dengan benar.
+
+
+
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026
+Jurusan Teknologi Informasi-Politeknik Negeri Malang                                    6
+Algoritma dan Struktur Data 2025-2026
+
+
+
+
+12.2.3 Pertanyaan
+1. Jelaskan perbedaan struktur dan mekanisme traversal antara Single Linked List dan
+   Double Linked List!
+2. Perhatikan class Node, di dalamnya terdapat atribut next dan prev. Jelaskan fungsi
+   masing-masing atribut tersebut pada proses traversal dan manipulasi node!
+3. Perhatikan konstruktor pada class DoubleLinkedList. Jelaskan fungsi konstruktor tersebut
+   terhadap kondisi awal linked list!
+4. Perhatikan potongan kode berikut:
+     if (isEmpty()) {
+         head = tail = newNode;
+     }
+   Mengapa head dan tail harus menunjuk node yang sama ketika linked list masih kosong?
+5. Modifikasi method print() agar menampilkan pesan "Linked List masih kosong" ketika
+   tidak terdapat data pada linked list!
+6. Modifikasi kode program dengan menambahkan method printReverse() untuk
+   menampilkan seluruh data pada Double Linked List secara terbalik, dimulai dari node tail
+   menuju head!
+
+12.3 Percobaan 2: Operasi Penghapusan pada Double Linked List
+12.3.1 Langkah-Langkah Percobaan
+    Pada percobaan 2 akan dibuat beberapa method untuk menghapus node pada Double
+Linked List. Penghapusan dilakukan melalui:
+ • node paling depan (removeFirst)
+ • node paling belakang (removeLast)
+    Langkah-langkah percobaan untuk menerapkan operasi penghapusan pada Double
+Linked List adalah sebagai berikut:
+
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026
+Jurusan Teknologi Informasi-Politeknik Negeri Malang                                     7
+Algoritma dan Struktur Data 2025-2026
+
+
+
+1. Buatlah method removeFirst() di dalam class DoubleLinkedList untuk menghapus node
+   pada bagian awal linked list. Perhatikan perubahan pointer head setelah node pertama
+   dihapus.
+
+
+
+
+2. Tambahkan method removeLast() untuk menghapus node pada bagian akhir linked list.
+   Perhatikan perubahan pointer tail setelah proses penghapusan dilakukan.
+
+
+
+
+12.3.2 Verifikasi Hasil Percobaan
+     Pastikan program berhasil dijalankan dan menghasilkan output yang sesuai seperti pada
+gambar berikut. Coba lakukan beberapa kombinasi penghapusan data untuk memastikan
+linked list berjalan dengan benar.
+
+
+
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026
+Jurusan Teknologi Informasi-Politeknik Negeri Malang                                    8
+Algoritma dan Struktur Data 2025-2026
+
+
+
+
+12.3.3 Pertanyaan Percobaan
+ 1. Perhatikan potongan kode berikut pada method removeFirst():
+      head = head.next;
+      head.prev = null;
+   Jelaskan fungsi masing-masing statement tersebut pada proses penghapusan node!
+2. Modifikasi method removeFirst() dan removeLast() agar program menampilkan data
+   yang berhasil dihapus!
+
+                                            --- *** ---
+
+
+
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026
+Jurusan Teknologi Informasi-Politeknik Negeri Malang                            9
+
