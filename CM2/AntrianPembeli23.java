@@ -9,6 +9,16 @@ public class AntrianPembeli23 {
         return head == null;
     }
 
+    int size() {
+        int count = 0;
+        NodePembeli23 current = head;
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
+        return count;
+    }
+
     void tambahAntrian(String namaPembeli, String noHp) {
         Pembeli23 pembeli = new Pembeli23(nextNoAntrian, namaPembeli, noHp);
         NodePembeli23 newNode = new NodePembeli23(tail, pembeli, null);
@@ -25,13 +35,13 @@ public class AntrianPembeli23 {
         System.out.println("Nomor antrian: " + pembeli.noAntrian);
     }
 
-    void tampilkanRingkasSetelahTambah() {
+    void cetakAntrian() {
         if (isEmpty()) {
             System.out.println("Antrian masih kosong.");
             return;
         }
 
-        System.out.println("\nAntrian saat ini:");
+        System.out.println("\nDaftar Antrian Pembeli:");
         System.out.printf("%-10s %-20s %s%n", "No", "Nama Pembeli", "No HP");
 
         NodePembeli23 current = head;
@@ -39,5 +49,40 @@ public class AntrianPembeli23 {
             current.data.tampil();
             current = current.next;
         }
+        System.out.println("Jumlah pembeli dalam antrian: " + size());
+    }
+
+    Pembeli23 hapusAntrian(int noAntrian) {
+        if (isEmpty()) {
+            return null;
+        }
+
+        NodePembeli23 current = head;
+        while (current != null && current.data.noAntrian != noAntrian) {
+            current = current.next;
+        }
+
+        if (current == null) {
+            return null;
+        }
+
+        if (head == tail) {
+            head = tail = null;
+        } else if (current == head) {
+            head = head.next;
+            head.prev = null;
+        } else if (current == tail) {
+            tail = tail.prev;
+            tail.next = null;
+        } else {
+            current.prev.next = current.next;
+            current.next.prev = current.prev;
+        }
+
+        return current.data;
+    }
+
+    void tampilkanRingkasSetelahTambah() {
+        cetakAntrian();
     }
 }
