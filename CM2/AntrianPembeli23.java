@@ -81,6 +81,23 @@ public class AntrianPembeli23 {
 
         return current.data;
     }
+    Pembeli23 hapusAntrianDepan() {
+        if (isEmpty()) {
+            return null;
+        }
+
+        Pembeli23 dataDepan = head.data;
+
+        if (head == tail) {
+            head = tail = null;
+        } else {
+            head = head.next;
+            head.prev = null;
+        }
+
+        return dataDepan;
+    }
+
 
     void tampilkanRingkasSetelahTambah() {
         cetakAntrian();

@@ -98,8 +98,10 @@ public class CM2Main23 {
                     }
 
                     antrian.cetakAntrian();
-                    int noAntrian = readInt(sc, "Masukkan no antrean yang dipanggil: ");
-                    Pembeli23 pembeli = antrian.hapusAntrian(noAntrian);
+                    // int noAntrian = readInt(sc, "Masukkan no antrean yang dipanggil: ");
+                    // Pembeli23 pembeli = antrian.hapusAntrian(noAntrian);
+                    Pembeli23 pembeli = antrian.hapusAntrianDepan();
+
 
                     if (pembeli == null) {
                         System.out.println("Nomor antrean tidak ditemukan.");
