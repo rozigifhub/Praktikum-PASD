@@ -85,4 +85,40 @@ public class DaftarPesanan23 {
         }
         System.out.println("Total pendapatan restoran: Rp " + hitungTotalPendapatan());
     }
+
+    void linearSearchByNama(String target) {
+        NodePesanan23 current = head;
+        boolean ketemu = false;
+
+        while (current != null) {
+            if (current.data.pembeli.namaPembeli.equalsIgnoreCase(target)) {
+                if (!ketemu) {
+                    System.out.println("Data pesanan ditemukan:");
+                    System.out.printf(
+                        "%-10s %-20s %-12s %-10s %-20s %s%n",
+                        "Kode", "Nama Pesanan", "Harga", "Antrian", "Pembeli", "No HP"
+                    );
+                }
+                current.data.tampil();
+                ketemu = true;
+            }
+            current = current.next;
+        }
+
+        if (!ketemu) {
+            System.out.println("Pesanan dengan nama pembeli " + target + " tidak ditemukan.");
+        }
+    }
+    void hapusSemuaPesanan() {
+        if (isEmpty()) {
+            System.out.println("Belum ada pesanan.");
+            return;
+        }
+
+        head = null;
+        tail = null;
+        System.out.println("Semua pesanan berhasil dihapus.");
+    }
+
+
 }

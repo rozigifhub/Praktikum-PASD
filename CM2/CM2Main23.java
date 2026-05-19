@@ -29,6 +29,10 @@ public class CM2Main23 {
         System.out.println("2. Cetak antrian");
         System.out.println("3. Hapus antrian + input pesanan");
         System.out.println("4. Laporan pesanan");
+        System.out.println("5. Lihat antrean depan");
+        System.out.println("6. Lihat antrean belakang");
+        System.out.println("7. Cari by nama");
+        System.out.println("8. Batal antrean");
         System.out.println("0. Keluar");
     }
 
@@ -58,18 +62,26 @@ public class CM2Main23 {
         }
     }
 
-    static Pesanan23 inputPesanan(Scanner sc, Pembeli23 pembeli) {
-        tampilkanMenuMakanan();
-        int pilihanMenu = readInt(sc, "Pilih makanan: ");
-        Pesanan23 pesanan = buatPesananDariPilihan(pilihanMenu, pembeli);
+    // static Pesanan23 inputPesanan(Scanner sc, Pembeli23 pembeli) {
+    //     tampilkanMenuMakanan();
+    //     int pilihanMenu = readInt(sc, "Pilih makanan: ");
+    //     Pesanan23 pesanan = buatPesananDariPilihan(pilihanMenu, pembeli);
 
-        while (pesanan == null) {
-            System.out.println("Pilihan makanan tidak tersedia.");
-            pilihanMenu = readInt(sc, "Pilih makanan: ");
-            pesanan = buatPesananDariPilihan(pilihanMenu, pembeli);
-        }
-        return pesanan;
+    //     while (pesanan == null) {
+    //         System.out.println("Pilihan makanan tidak tersedia.");
+    //         pilihanMenu = readInt(sc, "Pilih makanan: ");
+    //         pesanan = buatPesananDariPilihan(pilihanMenu, pembeli);
+    //     }
+    //     return pesanan;
+    // }
+    static Pesanan23 inputPesanan(Scanner sc, Pembeli23 pembeli) {
+        int kodePesanan = readInt(sc, "Kode Pesanan : ");
+        String namaPesanan = readLineNonEmpty(sc, "Nama Pesanan : ");
+        int harga = readInt(sc, "Harga Pesanan : ");
+
+        return new Pesanan23(kodePesanan, namaPesanan, harga, pembeli);
     }
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -113,6 +125,7 @@ public class CM2Main23 {
                     Pesanan23 pesanan = inputPesanan(sc, pembeli);
                     daftarPesanan.tambahPesanan(pesanan);
 
+                    System.out.println(pembeli.namaPembeli + " telah memesan " + pesanan.namaPesanan);
                     System.out.println("Pesanan berhasil disimpan.");
                     System.out.println("Sisa antrean setelah pemanggilan:");
                     antrian.cetakAntrian();
@@ -121,6 +134,32 @@ public class CM2Main23 {
                 case 4:
                     daftarPesanan.tampilkanLaporanTerurut();
                     break;
+                case 5:
+                    antrian.lihatAntreanDepan();
+                case 6:
+                    antrian.lihatAntreanBelakang();
+                case 7:
+                    System.out.print("Tulis nama: ");
+                    String nama = sc.nextLine();
+                    daftarPesanan.linearSearchByNama(nama);
+                case 8:  {
+                    if (antrian.isEmpty()) {
+                        System.out.println("Antrian masih kosong.");
+                        break;
+                    }
+
+                    antrian.cetakAntrian();
+                    int noAntrian = readInt(sc, "Masukkan nomor antrean yang dibatalkan: ");
+                    Pembeli23 batal = antrian.batalAntrian(noAntrian);
+
+                    if (batal == null) {
+                        System.out.println("Nomor antrean tidak ditemukan.");
+                    } else {
+                        System.out.println("Antrean berikut berhasil dibatalkan:");
+                        batal.tampil();
+                    }
+                    break;
+                }
                 case 0:
                     System.out.println("Keluar.");
                     break;

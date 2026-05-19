@@ -97,9 +97,60 @@ public class AntrianPembeli23 {
 
         return dataDepan;
     }
+    void lihatAntreanDepan(){
+        if (isEmpty()) {
+            System.out.println("Antrian masih kosong.");
+            return;
+        }else{
+            NodePembeli23 current = head;
+            current.data.tampil();
+        }
+    }
+    void lihatAntreanBelakang(){
+        if (isEmpty()) {
+            System.out.println("Antrian masih kosong.");
+            return;
+        }else{
+            NodePembeli23 current = tail;
+            current.data.tampil();
+        }
+    }
 
 
     void tampilkanRingkasSetelahTambah() {
         cetakAntrian();
     }
+
+    Pembeli23 batalAntrian(int noAntrian) {
+        if (isEmpty()) {
+            return null;
+        }
+
+        NodePembeli23 current = head;
+
+        while (current != null) {
+            if (current.data.noAntrian == noAntrian) {
+                Pembeli23 dataBatal = current.data;
+
+                if (head == tail) {
+                    head = tail = null;
+                } else if (current == head) {
+                    head = head.next;
+                    head.prev = null;
+                } else if (current == tail) {
+                    tail = tail.prev;
+                    tail.next = null;
+                } else {
+                    current.prev.next = current.next;
+                    current.next.prev = current.prev;
+                }
+
+                return dataBatal;
+            }
+            current = current.next;
+        }
+
+        return null;
+    }
+
 }
