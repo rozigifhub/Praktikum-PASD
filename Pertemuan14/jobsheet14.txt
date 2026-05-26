@@ -1,0 +1,258 @@
+Algoritma dan Struktur Data 2025-2026
+
+
+
+                                        JOBSHEET 14
+                                           Tree
+
+14.1 Tujuan Praktikum
+Setelah melakukan praktikum ini, mahasiswa mampu:
+ 1. memahami model Tree khususnya Binary Tree
+ 2. membuat dan mendeklarasikan struktur algoritma Binary Tree.
+ 3. menerapkan dan mengimplementasikan algoritma Binary Tree dalam kasus Binary Search Tree
+
+
+14.2 Kegiatan Praktikum 1
+Implementasi Binary Search Tree menggunakan Linked List (100 Menit)
+14.2.1 Percobaan 1
+Pada percobaan ini akan diimplementasikan Binary Search Tree dengan operasi dasar, dengan
+menggunakan linked list.
+      1. Pada Project yang sudah dibuat pada pertemuan sebelumnya, buat package dengan
+          nama Pertemuan14.
+       2. Tambahkan class-class berikut:
+             a. Mahasiswa00.java
+             b. Node00.java
+             c. BinaryTree00.java
+             d. BinaryTreeMain00.java
+          Ganti 00 dengan nomor absen Anda.
+       3. Implementasikan Class Mahasiswa00, Node00, BinaryTree00 sesuai dengan diagram
+          class berikut ini:
+
+                                           Mahasiswa
+                 nim: String
+                 nama: String
+                 kelas: String
+                 ipk: double
+                 Mahasiswa()
+                 Mahasiswa(nim: String, nama: String, kelas: String, ipk: double)
+                 tampilInformasi(): void
+
+                                              Node
+                          mahasiswa: Mahasiswa
+                          left: Node
+                          right: Node
+                          Node (left: Node, mahasiswa:Mahasiswa,
+                          right:Node)
+
+                                               BinaryTree
+                   root: Node
+                   BinaryTree()
+
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026
+Jurusan Teknologi Informasi-Politeknik Negeri Malang                                          1
+Algoritma dan Struktur Data 2025-2026
+
+
+
+                    add(mahasiswa: Mahasiswa) : void
+                    find(ipk: double) : boolean
+                    traversePreOrder (node : Node) : void
+                    traversePostOrder (node : Node) : void
+                    traverseInOrder (node : Node) : void
+                    getSuccessor (del: Node) : Node
+                    delete(ipk: double): void
+
+
+1.   Di dalam class Mahasiswa00, deklarasikan atribut sesuai dengan diagram class Mahasiswa di
+     atas. Tambahkan juga konstruktor dan method sesuai diagram di atas.
+
+
+
+
+2.   Di dalam class Node00, tambahkan atribut mahasiswa, left dan right, serta konstruktor default
+     dan berparameter.
+
+
+
+
+3.   Di dalam class BinaryTree00, tambahkan atribut root.
+
+
+
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026
+Jurusan Teknologi Informasi-Politeknik Negeri Malang                                            2
+Algoritma dan Struktur Data 2025-2026
+
+
+
+
+4.   Tambahkan konstruktor dan method isEmpty() di dalam class BinaryTree00.
+
+
+
+
+5.   Tambahkan method add() di dalam class BinaryTree00. Node ditambahkan di binary search tree
+     pada posisi sesuai dengan besar nilai IPK mahasiswa. Di bawah ini proses penambahan node tidak
+     dilakukan secara rekursif, agar lebih mudah dilihat alur proses penambahan node dalam tree.
+     Sebenarnya dengan proses rekursif penulisan kode akan lebih efisien.
+
+
+
+
+6.   Tambahkan method find()
+
+
+
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026
+Jurusan Teknologi Informasi-Politeknik Negeri Malang                                             3
+Algoritma dan Struktur Data 2025-2026
+
+
+7.   Tambahkan method traversePreOrder(), traverseInOrder() dan traversePostOrder(). Method
+     traverse digunakan untuk mengunjungi dan menampilkan node-node dalam binary tree, baik
+     dalam mode pre-order, in-order maupun post-order.
+
+
+
+
+8.   Tambahkan method getSuccessor(). Method ini akan digunakan ketika proses penghapusan node
+     yang memiliki 2 child.
+
+
+
+
+9.   Tambahkan method delete(). Di dalam method delete tambahkan pengecekan apakah tree
+     kosong, dan jika tidak, cari posisi node yang akan dihapus.
+
+
+
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026
+Jurusan Teknologi Informasi-Politeknik Negeri Malang                                        4
+Algoritma dan Struktur Data 2025-2026
+
+
+
+
+10. Kemudian tambahkan proses penghapusan di dalam method delete() terhadap node current
+    yang telah ditemukan.
+
+
+
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026
+Jurusan Teknologi Informasi-Politeknik Negeri Malang                                   5
+Algoritma dan Struktur Data 2025-2026
+
+
+
+
+11. Buka class BinaryTreeMain00 dan tambahkan method main() kemudian tambahkan kode berikut
+    ini:
+
+
+
+
+12. Compile dan jalankan class BinaryTreeMain00 untuk mendapatkan simulasi jalannya program
+    binary tree yang telah dibuat.
+13. Amati hasil running tersebut.
+
+
+
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026
+Jurusan Teknologi Informasi-Politeknik Negeri Malang                                     6
+Algoritma dan Struktur Data 2025-2026
+
+
+
+
+14.2.2 Pertanyaan Percobaan
+1. Mengapa dalam binary search tree proses pencarian data bisa lebih efektif dilakukan dibanding
+   binary tree biasa?
+2. Untuk apakah di class Node, kegunaan dari atribut left dan right?
+3. a. Untuk apakah kegunaan dari atribut root di dalam class BinaryTree?
+   b. Ketika objek tree pertama kali dibuat, apakah nilai dari root?
+4. Ketika tree masih kosong, dan akan ditambahkan sebuah node baru, proses apa yang akan terjadi?
+5. Perhatikan method add(), di dalamnya terdapat baris program seperti di bawah ini. Jelaskan
+   secara detil untuk apa baris program tersebut?
+
+
+
+
+6. Jelaskan langkah-langkah pada method delete() saat menghapus sebuah node yang memiliki dua
+   anak. Bagaimana method getSuccessor() membantu dalam proses ini?
+
+
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026
+Jurusan Teknologi Informasi-Politeknik Negeri Malang                                           7
+Algoritma dan Struktur Data 2025-2026
+
+
+
+14.3 Kegiatan Praktikum 2
+Implementasi Binary Tree dengan Array (45 Menit)
+ 14.3.1 Tahapan Percobaan
+1.   Di dalam percobaan implementasi binary tree dengan array ini, data tree disimpan dalam array
+     dan langsung dimasukkan dari method main(), dan selanjutnya akan disimulasikan proses
+     traversal secara inOrder.
+2.   Buatlah class BinaryTreeArray00 dan BinaryTreeArrayMain00. Ganti 00 dengan nomer absen
+     Anda.
+3.   Buat atribut data dan idxLast di dalam class BinaryTreeArray00. Buat juga method
+     populateData() dan traverseInOrder().
+
+
+
+
+4.   Kemudian dalam class BinaryTreeArrayMain00 buat method main() dan tambahkan kode seperti
+     gambar berikut ini di dalam method main().
+
+
+
+
+5.   Jalankan class BinaryTreeArrayMain00 dan amati hasilnya!
+
+
+
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026
+Jurusan Teknologi Informasi-Politeknik Negeri Malang                                           8
+Algoritma dan Struktur Data 2025-2026
+
+
+
+
+14.3.2 Pertanyaan Percobaan
+      1. Apakah kegunaan dari atribut data dan idxLast yang ada di class BinaryTreeArray?
+      2. Apakah kegunaan dari method populateData()?
+      3. Apakah kegunaan dari method traverseInOrder()?
+      4. Jika suatu node binary tree disimpan dalam array indeks 2, maka di indeks berapakah posisi
+         left child dan right child masing-masing?
+      5. Apa kegunaan statement int idxLast = 6 pada praktikum 2 percobaan nomor 4?
+      6. Mengapa indeks 2*idxStart+1 dan 2*idxStart+2 digunakan dalam pemanggilan
+         rekursif, dan apa kaitannya dengan struktur pohon biner yang disusun dalam array?
+
+14.4 Tugas Praktikum
+Waktu pengerjaan: 150 menit
+      1. Buat method di dalam class BinaryTree00 yang akan menambahkan node dengan cara
+          rekursif (addRekursif()).
+      2. Buat method di dalam class BinaryTree00 untuk menampilkan data mahasiswa dengan IPK
+          paling kecil dan IPK yang paling besar (cariMinIPK() dan cariMaxIPK()) yang ada di dalam
+          binary search tree.
+      3. Buat method dalam class BinaryTree00 untuk menampilkan data mahasiswa dengan IPK di
+          atas suatu batas tertentu, misal di atas 3.50 (tampilMahasiswaIPKdiAtas(double ipkBatas))
+          yang ada di dalam binary search tree.
+      4. Modifikasi class BinaryTreeArray00 di atas, dan tambahkan :
+         • method add(Mahasiswa data) untuk memasukkan data ke dalam binary tree
+         • method traversePreOrder()
+
+
+
+
+Tim Ajar Algoritma dan Struktur Data 2025-2026
+Jurusan Teknologi Informasi-Politeknik Negeri Malang                                             9
+
