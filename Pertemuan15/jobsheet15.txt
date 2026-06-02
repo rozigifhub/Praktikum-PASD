@@ -1,0 +1,203 @@
+                                5- 2026
+   Algoritma dan Struktur Data 202
+
+
+
+                                   JOBSHEET XIV
+                                      Collection
+13.1   Tujuan Praktikum
+
+   Setelah melakukan praktikum ini, mahasiswa mampu:
+   1. memahami manfaat Java Collection Framework;
+   2. mengimplementasikan class dalam Java Collection Framework sesuai kasus;
+
+
+13.2   Persiapan
+
+    Sebelum mulai mencoba class-class dalam Java Collection Framework, buatlah beberapa
+class yang akan digunakan dalam praktikum berikutnya:
+   1. Buat folder Praktikum14
+   2. Buat class Customer dalam Customer.java
+
+
+
+
+                                          hlm. 1 dari 9
+                                 5- 2026
+    Algoritma dan Struktur Data 202
+
+
+   3. Buat class Book dalam Book.java
+
+
+
+
+13.3   Praktikum - Implementasi ArrayList
+
+    ArrayList merupakan sebuah class dari Java Collection Framework yang menyediakan
+implementasi struktur data serupa dengan array tetapi dengan ukuran dinamis.
+   1. Buat file DemoArrayList.java. Lakukan import java.util.ArrayList;
+   2. Pada fungsi main(), instansiasi collection baru dengan nama customers bertipe ArrayList
+       of Customer dengan size 2. Selanjutnya, buat object customer1 dan customer2 kemudian
+       tambahkan ke dalam ArrayList customers dengan method add.
+
+
+
+
+   3. Gunakan looping dengan foreach untuk mencetak data customers
+
+
+
+
+                                           hlm. 2 dari 9
+                             5- 2026
+Algoritma dan Struktur Data 202
+
+
+4. Cobalah tambahkan object customer baru ke dalam customers. Apakah object dapat
+   ditambahkan meskipun melebihi kapasitas?
+
+
+
+
+5. Compile dan run kode program, di mana object yang baru ditambahkan? Di awal, di
+   tengah, atau di akhir collection?
+6. Untuk menambahkan object baru pada index tertentu, lakukan sebagai berikut
+
+
+
+
+7. Compile dan run kode program. Index pada ArrayList dimulai dari 0 atau 1?
+
+
+
+
+                                       hlm. 3 dari 9
+                             5- 2026
+Algoritma dan Struktur Data 202
+
+
+8. Untuk mengetahui posisi dari suatu objek, gunakan method indexOf()
+
+
+
+
+9. Untuk mengembalikan object pada index tertentu, gunakan method get()
+
+
+
+
+10. Cobalah hapus angka 2 saat instansiasi object customers. Apakah ArrayList dapat
+   diinstansiasi tanpa harus menentukan size di awal?
+11. Anda juga dapat menambahkan sekumpulan customer baru ke dalam ArrayList secara
+   sekaligus. Misalnya terdapat ArrayList newCustomers. Tambahkan seluruh object
+   customer sekaligus ke dalam customers.
+
+
+                                       hlm. 4 dari 9
+                                5- 2026
+   Algoritma dan Struktur Data 202
+
+
+
+
+   12.    Karena sudah menyediakan method toString(), pengecekan data customers untuk
+          proses debugging juga dapat dilakukan lebih sederhana dengan cara berikut
+
+
+
+
+13.4     Praktikum - Implementasi Stack
+
+         Class Stack dalam Java Collection Framework yang menyediakan implementasi struktur
+data tumpukan/stack.
+   1. Buat file StackDemo.java. Lakukan import java.util.Stack;
+   2. Pada fungsi main() buat beberapa object bertipe Book.
+   3. Instansiasi object books bertipe Stack of Book kemudian tambahkan object yang sudah
+         dibuat ke dalamnya menggunakan method push()
+
+
+
+
+   4. Class Stack juga sudah memiliki method pop() dan peek() seperti yang Anda
+         diimpelementasikan secara manual pada praktikum sebelumnya
+
+
+
+
+                                           hlm. 5 dari 9
+                                 5- 2026
+    Algoritma dan Struktur Data 202
+
+
+
+
+   5. Mengapa perlu ada pengecekan (temp != null)?
+   6. Lakukan looping untuk mencetak data buku pada stack
+
+
+
+
+   7. Jika diperlukan pada proses debugging, books juga dapat dicetak dengan cara berikut
+
+
+
+   8. Bagaimana cara melakukan pencarian elemen pada stack menggunakan method
+       search()?
+
+
+13.5   Praktikum - Implementasi TreeSet
+
+    Class TreeSet pada Java Collection Framework menyediakan implementasi binary search
+tree. Lakukan langkah percobaan berikut:
+  1.   Buat file TreeSetDemo.java kemudian import java.util.TreeSet;
+  2.   Tambahkan fungsi main() kemudian instansiasi object TreeSet of String. Tambahkan
+       beberapa nilai bertipe String ke dalam TreeSet
+
+
+
+
+  3.   Cetak data pada ts dengan looping
+
+
+
+
+                                           hlm. 6 dari 9
+                                 5- 2026
+    Algoritma dan Struktur Data 202
+
+
+  4.      Compile dan run program. Mengapa urutan yang ditampilkan berbeda dengan urutan
+          penambahan data ke dalam TreeSet fruits?
+  5.      Tambahkan kode program sebagai berikut:
+
+
+
+
+  6.      Apa yang dilakukan oleh method first(), last(), remove(), pollFirst(), dan pollLast()?
+
+
+13.6     Praktikum – Sorting
+
+       Selain pencarian data menggunakan method get() atau search(), Java Collection Framework
+juga menyediakan fungsi untuk melakukan pengurutan data.
+       Untuk melakukan pengurutan data String, int, atau primitive data type lain, Anda dapat
+melakukan cara berikut:
+
+
+
+
+       Khusus untuk collection of objects, pengurutan data harus menentukan berdasarkan atribut
+mana pengurutan dilakukan. Misalnya ingin dilakukan pengurutan data customer pada
+praktikum di atas berdasarkan atribut name. Gunakan kode program berikut (berikan nama
+variabel c1 dan c2 secara random. Anda bisa menggunakan nama variabel lainnya)
+
+
+
+
+       Kedua cara di atas dapat digunakan untuk mengurutkan data pada jenis collection lain yang
+tidak melakukan pengurutan secara otomatis seperti TreeSet.
+
+
+                                               hlm. 7 dari 9
+
