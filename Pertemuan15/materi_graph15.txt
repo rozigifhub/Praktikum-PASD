@@ -1,0 +1,365 @@
+                           GRAPH
+                              TIM AJAR
+                     ALGORITMA DAN STRUKTUR DATA
+                              2025/2026
+
+
+
+
+jti.polinema.ac.id          ALGORITMA DAN STRUKTUR DATA
+    Capaian Pembelajaran
+
+    Setelah mempelajari materi Graf, mahasiswa diharapkan mampu
+     • Memahami definisi Graf dan terminologinya
+     • Memahami memodelkan permasalahan di dunia nyata
+        menggunakan Graf
+     • Memahami merepresentasikan struktur data Graf
+
+
+
+
+jti.polinema.ac.id            ALGORITMA DAN STRUKTUR DATA
+    Definisi Graf
+
+     •    Graf digunakan untuk merepresentasikan objek-objek diskrit dan
+          hubungan antara objek-objek tersebut
+     •    Contoh graf dalam mengilustrasikan sebagian gedung di Polinema:
+                TM
+                         TS                                    Node (vertex) → gedung
+                         TI        AS
+                                         Sisi (edge) → jalan
+
+                                                               AD        AC             AB
+                                   AI
+
+
+           AU
+
+
+                                                               AE                            AA
+                     A
+                     M        AL        AK        AJ
+
+
+
+jti.polinema.ac.id                       ALGORITMA DAN STRUKTUR DATA                              3
+    Definisi Graf (2)
+
+     •    Graf G = (V, E) adalah himpunan berhingga tak kosong V(G) dan
+          himpunan E(G) mungkin kosong, yang elemen-elemennya
+          merupakan himpunan pasangan tak berurut 2 elemen-elemen
+          berbeda dari V(G)
+     •    Komponen graf G terdiri dari:
+           •   V yaitu himpunan tidak kosong dari titik-titik (vertices)
+               V = {a, b, …., vn}
+           •   E yaitu himpunan garis (edges) yang menghubungkan titik-titik
+               E = {e1, e2, …, en} atau {(a,b), {a,c), (n,n)}
+
+
+jti.polinema.ac.id                    ALGORITMA DAN STRUKTUR DATA              4
+    Istilah pada Graf
+    •   Vertex (Titik atau simpul)
+        Titik dalam graph disebut dengan vertex. Biasanya disimbolkan dengan
+        bentuk lingkaran.
+    •   Edge (Garis atau sisi atau tepi)
+        Garis-garis penghubung antar titik dalam graph disebut dengan garis
+        (edge)
+    •   Adjacency (Bertetangga)
+        Dua titik (vertex) dinamakan bertetangga (adjacent) jika saling terhubung
+        melalui satu garis (edge).
+    •   Path (Lintasan)
+        Path atau intasan adalah representasi sebuah jalan dari satu titik ke titik
+        lainnya.
+
+jti.polinema.ac.id                   ALGORITMA DAN STRUKTUR DATA
+    Contoh Graf
+
+     •    TS TI bertetangga dengan TM, AS, dan AM
+     •    AI tidak bertetangga dengan TM, TS TI, AU, AJ, AC, AB, AE, dan AA
+     •    Path dari TS TI ke AD yaitu TS TI → AS → AI → AD
+              TM
+                  e   TS
+                      1
+                                      atau TS TI → AM → AL → AK → AJ → AD
+                       TI      AS
+                           e          Shortest path: path dengan jarak terdekat
+                                         2
+                                                        e10
+                                                                           e11                     e14         e15
+                          e3                                                                AD            AC         AB
+                                                   AI
+                                                                                                                          e19
+                                                                                             e16
+           AU                       e5                                                                   e17
+                 e4                                           e9                      e12
+                                              e7
+                                                                                            AE                             AA
+                          A                                                                                    e18
+                          M              AL                    AK                AJ
+                               e6                  e8                e13
+
+jti.polinema.ac.id                                                 ALGORITMA DAN STRUKTUR DATA                                  6
+    Istilah pada Graf
+
+       Connected Graph (Terhubung)                Unconnected Graph (Tidak Terhubung)
+      Ada setidaknya satu garis (edge)           Satu atau lebih nodenya tidak
+      antara satu node (vertex) ke node          terhubung ke node lainnya
+      lainnya
+                     TM                                    TM
+                              TS                                    TS
+                              TI    AS                              TI     AS
+
+
+
+
+                                    AI                                     AI
+                AU                                    AU
+
+
+
+                          A                                     A                UB
+                          M                                     M
+
+jti.polinema.ac.id                       ALGORITMA DAN STRUKTUR DATA
+    Istilah pada Graf (2)
+
+       Directed Graph (Berarah)                  Undirected Graph (Tidak Berarah)
+      Setiap sisinya (edge) memiliki arah.      Setiap sisinya (edge) tidak memiliki
+      Sisi menunjukkan hubungan dari satu       arah
+      node (vertex) ke node lainnya secara
+      satu arah TM                                        TM
+                           TS                                      TS
+                           TI      AS                              TI      AS
+
+
+
+
+                                   AI                                      AI
+                AU                                   AU
+
+
+
+                       A                                       A
+                       M                                       M
+
+jti.polinema.ac.id                      ALGORITMA DAN STRUKTUR DATA                    8
+    Istilah pada Graf (3)
+
+       Weighted Graph (Berbobot)                        Unweighted Graph (Tidak Berbobot)
+      Setiap sisi (edge) memiliki bobot yang           Setiap sisi (edge) tidak memiliki bobot.
+      menunjukkan biaya atau jarak yang                Semua hubungan antara node (vertex)
+      terkait dengan hubungan antara dua               dianggap setara
+      node         TM                                            TM
+                                 TS                                       TS
+                         2       TI       AS                              TI       AS
+                                      2
+ Undirected weighted                           1
+                             6
+                                          AI                                       AI
+                AU                                          AU
+
+
+
+                     3                4
+                             A                                        A
+                                                                                Directed unweighted
+                             M                                        M
+
+jti.polinema.ac.id                             ALGORITMA DAN STRUKTUR DATA                        9
+    Istilah pada Graf (3)
+
+     •    Degree (derajat) sebuah node adalah jumlah           TM
+                                                                         TS
+                                                                         TI       AS
+          sisi yang bersebelahan dengan node tersebut
+          atau jumlah garis yang keluar dari node
+                                                                                  AI
+     •    In-degree sebuah node pada graph berarah        AU
+
+          adalah jumlah sisi yang “masuk” atau menuju
+          node tersebut                                              A
+                                                                     M
+
+
+     •    Out-degree sebuah node pada graph berarah
+          adalah jumlah sisi yang “keluar” atau berasal         Din (TS TI) = 2
+          dari node tersebut                                    Dout(TS TI) = 3
+
+jti.polinema.ac.id                ALGORITMA DAN STRUKTUR DATA                          10
+    Jenis Representasi Graf
+
+     •    Adjacency List
+          Menggunakan suatu array pada linked list. Array tersebut
+          digunakan untuk menyimpan jumlah node. Nilai pada linked list
+          dapat digunakan untuk menyimpan bobot graf
+     •    Adjacency Matrix
+          Merupakan array 2D dengan size V x V dimana V adalah jumlah
+          node pada graph. Jika adj[i][j] = 1 dapat diartikan terdapat suatu
+          garis (edge) pada titik i ke titik j
+
+
+
+jti.polinema.ac.id                 ALGORITMA DAN STRUKTUR DATA                 11
+    Contoh Adjacency List
+                                    Vertex List   Adjacency List
+                                                  TS
+                                         TM
+     Undirected Graph                             TI
+
+
+                                         TS
+             TM                                   TM               AM   AS
+                                         TI
+                         TS
+                         TI   AS
+
+                                                  TS
+                                         AM                        AI   AU
+                                                  TI
+
+                              AI
+        AU
+                                         AI       AM               AS
+
+
+                     A
+                     M
+                                                  TS
+                                         AS                        AI
+                                                  TI
+
+
+
+                                         AU       AM
+
+
+jti.polinema.ac.id                 ALGORITMA DAN STRUKTUR DATA               12
+    Contoh Adjacency Matrix
+                                                                           TS
+                                                                      TM        AS   AI   AM   AU
+     Undirected Graph                                                      TI
+
+                                                    TM           TM    0   2    0    0    0    0
+             TM
+                          TS                        TS           TS
+                  2       TI       AS               TI           TI    2   0    2    0    6    0
+                               2
+                                        1           AS           AS    0   2    0    1    0    0
+                      6
+                                   AI
+                                                    AI           AI    0   0    1    0    4    0
+        AU
+
+
+                               4                    AM           AM    0   6    0    4    0    3
+              3
+                      A
+                      M
+                                                    AU           AU    0   0    0    0    3    0
+
+                                                 Vertex Vector        Adjacency Matrix
+
+
+jti.polinema.ac.id                          ALGORITMA DAN STRUKTUR DATA                             13
+    Contoh Adjacency Matrix
+                                                                  TS
+                                                             TM        AS   AI   AM   AU
+     Directed Graph                                               TI
+
+                                           TM           TM    0   1    0    0    0    0
+             TM
+                         TS                TS           TS
+                         TI   AS           TI           TI    1   0    1    0    1    0
+
+                                           AS           AS    0   1    0    0    0    0
+                              AI
+        AU
+                                           AI           AI    0   0    0    0    1    0
+
+                                           AM           AM    0   1    0    1    0    1
+                     A
+                     M
+                                           AU           AU    0   0    0    0    0    0
+
+                                        Vertex Vector        Adjacency Matrix
+
+
+jti.polinema.ac.id                 ALGORITMA DAN STRUKTUR DATA                             14
+    Operasi Dasar pada Graf
+
+     •    Menyisipkan node: memasukkan node ke dalam graf
+     •    Menghapus vertex : menghapus sebuah node dari graf
+     •    Membuat lintasan: menghubungkan dua node menggunakan edge
+     •    Mencari entitas: mencari node atau edge pada graf
+     •    Mencari lintasan: melintasi jalur di antara dua node
+     •    Traversal: melintasi semua node dalam graf
+
+
+
+
+jti.polinema.ac.id             ALGORITMA DAN STRUKTUR DATA            15
+    Implementasi Graf
+
+     • Menggunakan Linked List
+       Class Graph mempunyai atribut:
+       int vertex
+       LinkedList list[]
+     • Menggunakan Matrix
+       Class Graph mempunyai atribut:
+       int vertex
+       int[][] array
+
+jti.polinema.ac.id            ALGORITMA DAN STRUKTUR DATA   16
+    Latihan 1
+
+     Ubah matrix berikut ke dalam bentuk graf!
+     a.     V1 V2 V3 V4 V5 V6           b.             N1   N2   N3   N4   N5   N6
+
+            V1   0   1   0   0   0   0            N1   0    2    0    6    0    0
+
+            V2   1   1   1   0   0   0            N2   0    0    3    0    0    0
+
+            V3   0   1   0   1   1   1            N3   0    0    0    0    1    0
+
+            V4   0   0   1   0   0   0            N4   0    0    0    0    4    2
+
+            V5   0   0   1   0   0   0            N5   0    0    0    0    0    7
+
+            V6   0   0   1   0   0   0            N6   5    0    0    0    0    0
+
+jti.polinema.ac.id                   ALGORITMA DAN STRUKTUR DATA                     17
+    Latihan 2
+
+     Ubah matrix berikut ke dalam bentuk graf!
+              e1     e2   e3   e4   e5   e6   e7   e8
+
+        V1     1     1    0    1    1    0    0    0
+
+        V2     1     0    1    0    0    0    0    0
+
+        V3     0     1    1    0    0    1    1    0
+
+        V4     0     0    0    1    0    1    0    1
+
+        V5     0     0    0    0    0    0    0    1
+
+
+
+jti.polinema.ac.id                       ALGORITMA DAN STRUKTUR DATA   18
+    Latihan 3
+    Perhatikan graf berikut!
+                         5               2               a. Ubahlah graf tersebut ke dalam
+             A                   B           C
+                                                            bentuk adjacency matrix!
+                     3               3           1
+                             6                           b. Tentukan shortest path dari A ke
+         8
+                                             F              F!
+                             E           7               c. Tentukan lintasan traversal
+             D       4
+                                                            untuk menghubungkan semua
+                                                            node dengan jarak terpendek!
+
+
+jti.polinema.ac.id                                   ALGORITMA DAN STRUKTUR DATA
+
